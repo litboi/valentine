@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Be My Valentine?</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin-top: 100px;
+      background: pink;
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 20px;
+      margin: 20px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    #noBtn {
+      position: absolute;
+    }
+
+    #confetti {
+      display: none;
+      font-size: 50px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Will you be my Valentine? ❤️</h1>
+
+<button onclick="sayYes()">Yes 💖</button>
+<button id="noBtn" onmouseover="moveButton()">No 😢</button>
+
+<div id="confetti">🎉🎉🎉 YAYYYYY!!! 🎉🎉🎉</div>
+
+<script>
+  function moveButton() {
+    let button = document.getElementById("noBtn");
+    let x = Math.random() * window.innerWidth - 100;
+    let y = Math.random() * window.innerHeight - 50;
+    button.style.left = x + "px";
+    button.style.top = y + "px";
+  }
+
+  function sayYes() {
+    document.getElementById("confetti").style.display = "block";
+    document.body.style.background = "lightgreen";
+  }
+</script>
+
+</body>
+</html>
